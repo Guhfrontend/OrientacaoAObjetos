@@ -1,11 +1,8 @@
 package ContaCorrente;
 
-import java.util.Scanner;
-
 public class ContaBanco {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
         ContaCorrente Conta = new ContaCorrente();
 
 
