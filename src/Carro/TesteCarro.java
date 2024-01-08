@@ -2,32 +2,34 @@ package Carro;
 
 public class TesteCarro {
     public static void main(String[] args) {
-        Carro van = new Carro("Fiat","Ducato",10,100,0.2);
+        Carro carro = new Carro("Fiat","Ducato",10,100,0.2);
         /*van.marca = "Fiat";
         van.modelo = "Ducato";
         van.numPassageiros = 10;
         van.capCombustivel = 100;
         van.consumoCombustivel = 0.2;*/
 
-        System.out.println(van.marca);
-        System.out.println(van.modelo);
-        System.out.println(van.numPassageiros);
-        System.out.println(van.capCombustivel);
-        System.out.println(van.consumoCombustivel);
+        System.out.println(carro.marca);
+        System.out.println(carro.modelo);
+        System.out.println(carro.numPassageiros);
+        System.out.println(carro.capCombustivel);
+        System.out.println(carro.consumoCombustivel);
 
 
-        van.exibirAutonomia();
+        carro.exibirAutonomia();
 
-        double autonomia = van.obterAutonomia();
+       double autonomia = carro.obterAutonomia();
 
-        van.exibirAutonomia();
+        carro.exibirAutonomia();
 
-        double qtdConbustivel10 = van.calculaCombustivel(10);
-        double qtdConbustivel15 = van.calculaCombustivel(15);
+        double qtdConbustivel10 = carro.calculaCombustivel(10);
+        double qtdConbustivel15 = carro.calculaCombustivel(15);
 
         System.out.println("Calculo de combustível: " + qtdConbustivel10);
         System.out.println("Calculo de combustível: " + qtdConbustivel15);
 
-        System.out.println(van.numPassageiros);
+        System.out.println(carro.numPassageiros);
+
+
     }
 }
