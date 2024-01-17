@@ -1,28 +1,31 @@
 package Vendas;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class application {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        application televisao = new application();
 
-        product product = new product();
+
         System.out.println("Enter product data: ");
         System.out.print("Name: ");
-        product.nome = scan.nextLine();
+        String name = scan.nextLine();
         System.out.print("Price: ");
-        product.price = scan.nextDouble();
+        double price = scan.nextDouble();
         System.out.print("Quantity in stock: ");
-        product.quantity = scan.nextInt();
+        int quantity = scan.nextInt();
+
+        product product = new product(name, price, quantity);
 
         product.toString();
 
-         System.out.println("Enter the number of products to be added in stock: ");
-         int quantity = scan.nextInt();
-         product.addProduct(quantity);
+        product.setNome("Computer");
+        System.out.println(product.getnome());
+
+        System.out.println("Enter the number of products to be added in stock: ");
+         quantity = scan.nextInt();
+        product.addProduct(quantity);
 
         product.toString();
 
@@ -31,5 +34,6 @@ public class application {
         product.removeProduct(quantity);
 
         product.toString();
+
     }
 }

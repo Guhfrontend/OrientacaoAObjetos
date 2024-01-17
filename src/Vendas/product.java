@@ -1,27 +1,53 @@
 package Vendas;
 
-import javax.xml.namespace.QName;
 
 public class product {
 
-    public String nome;
-    public double price;
-    public int quantity;
+    private String name;
+    private double price;
+    private int quantity;
 
-public double totalValueInStock(){
-    return price*quantity;
-}
-public void addProduct(int quantity) {
-    this.quantity += quantity;
-}
-public void removeProduct(int quantity){
-    this.quantity -= quantity;
-}
 
-public String toString(){
-    System.out.println("Product data: "+ nome + ", $" + price+", "+ quantity+ " units, " + "Total: $" + totalValueInStock());
-    return null;
-}
+    public product() {
+    }
+
+    public product(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public double totalValueInStock() {
+        return price * quantity;
+    }
+
+    public void addProduct(int quantity) {
+        this.quantity += quantity;
+    }
+
+    public void removeProduct(int quantity) {
+        this.quantity -= quantity;
+    }
+
+    public String toString() {
+        System.out.println("Product data: " + name + ", $" + price + ", " + quantity + " units, " + "Total: $" + totalValueInStock());
+        return null;
+    }
+    public String getnome(){
+        return name;
+    }
+    public void setNome(String nome) {
+        this.name = nome;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public void setPrice(double price){
+        this.price = price;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
 
 
 
