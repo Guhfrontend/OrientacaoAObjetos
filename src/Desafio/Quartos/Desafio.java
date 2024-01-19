@@ -1,4 +1,4 @@
-package Desafio;
+package Desafio.Quartos;
 
 import java.util.Locale;
 import java.util.Scanner;

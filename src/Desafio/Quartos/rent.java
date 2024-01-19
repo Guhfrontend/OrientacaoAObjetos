@@ -1,4 +1,4 @@
-package Desafio;
+package Desafio.Quartos;
 
 public class rent {
     String nome;
